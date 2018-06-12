@@ -1,0 +1,8 @@
+dependencies {
+    compile ( libraries.spring_boot2_aop )
+    compile ( libraries.spring_boot2_actuator )
+    compile ( libraries.hibernate_validator )
+    testCompile ( libraries.spring_boot2_test )
+    testCompile ( libraries.micrometer_prometheus )
+    testCompile ( libraries.spring_boot2_web )
+}

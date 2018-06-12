@@ -1,0 +1,91 @@
+// Allows centralized definition of the version of artifacts to
+// use.  In that respect it serves a role similar to <dependencyManagement> in Maven
+ext {
+    vavrVersion = '0.9.2'
+    rxJavaVersion = '2.1.10'
+    reactorVersion = '3.0.7.RELEASE'
+    junitVersion = '4.12'
+    slf4jVersion = '1.7.24'
+    assertjVersion = '3.6.2'
+    logbackVersion = '0.9.26'
+    mockitoVersion = '2.15.0'
+    powermockVersion = '2.0.0-beta.5'
+    jcacheVersion = '1.0.0'
+    awaitilityVersion = '1.7.0'
+    metricsVersion = '3.2.5'
+    vertxVersion = '3.5.1'
+    springBootVersion = '1.5.10.RELEASE'
+    springBoot2Version = '2.0.0.RELEASE'
+    ratpackVersion = '1.5.4'
+    spockVersion = '1.1-groovy-2.4-rc-4'
+    retrofitVersion = '2.3.0'
+    prometheusSimpleClientVersion = '0.3.0'
+    reactorVersion = '3.1.5.RELEASE'
+    reactiveStreamsVersion = '1.0.2'
+    micrometerVersion = '1.0.0'
+    hibernateValidatorVersion = '6.0.9.Final'
+
+    libraries = [
+            // compile
+            vavr:  "io.vavr:vavr:${vavrVersion}",
+            slf4j: "org.slf4j:slf4j-api:${slf4jVersion}",
+            rxjava2: "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            jcache: "javax.cache:cache-api:${jcacheVersion}",
+            reactor: "io.projectreactor:reactor-core:${reactorVersion}",
+
+            // testCompile
+            junit:           "junit:junit:${junitVersion}",
+            assertj: "org.assertj:assertj-core:${assertjVersion}",
+            logback: "ch.qos.logback:logback-classic:${logbackVersion}",
+            mockito: "org.mockito:mockito-core:${mockitoVersion}",
+            powermock: "org.powermock:powermock-core:${powermockVersion}",
+            powermock_api_mockito: "org.powermock:powermock-api-mockito2:${powermockVersion}",
+            powermock_module_junit4: "org.powermock:powermock-module-junit4:${powermockVersion}",
+            awaitility: "com.jayway.awaitility:awaitility:${awaitilityVersion}",
+            reactor_test: "io.projectreactor:reactor-test:${reactorVersion}",
+            reactive_streams_tck: "org.reactivestreams:reactive-streams-tck:${reactiveStreamsVersion}",
+
+            // Vert.x addon
+            vertx: "io.vertx:vertx-core:${vertxVersion}",
+            vertx_unit: "io.vertx:vertx-unit:${vertxVersion}",
+
+            // Spring Boot addon
+            spring_reactor: "io.projectreactor:reactor-core:${reactorVersion}",
+            spring_boot_aop: "org.springframework.boot:spring-boot-starter-aop:${springBootVersion}",
+            spring_boot_actuator: "org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}",
+            spring_boot_web: "org.springframework.boot:spring-boot-starter-web:${springBootVersion}",
+            spring_boot_test:  "org.springframework.boot:spring-boot-starter-test:${springBootVersion}",
+
+            // Spring Boot2 addon
+            spring_boot2_aop: "org.springframework.boot:spring-boot-starter-aop:${springBoot2Version}",
+            spring_boot2_actuator: "org.springframework.boot:spring-boot-starter-actuator:${springBoot2Version}",
+            spring_boot2_web: "org.springframework.boot:spring-boot-starter-web:${springBoot2Version}",
+            spring_boot2_test:  "org.springframework.boot:spring-boot-starter-test:${springBoot2Version}",
+            hibernate_validator: "org.hibernate.validator:hibernate-validator:${hibernateValidatorVersion}",
+
+            // ratpack addon
+            ratpack: "io.ratpack:ratpack-guice:${ratpackVersion}",
+            ratpack_metrics: "io.ratpack:ratpack-dropwizard-metrics:${ratpackVersion}",
+            ratpack_test: "io.ratpack:ratpack-groovy-test:${ratpackVersion}",
+            spock: "org.spockframework:spock-core:${spockVersion}",
+
+            // Retrofit addon
+            retrofit: "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofit_test: "com.squareup.retrofit2:converter-scalars:${retrofitVersion}",
+            retrofit_wiremock: "com.github.tomakehurst:wiremock:1.58",
+
+            // Metrics addon
+            metrics: "io.dropwizard.metrics:metrics-core:${metricsVersion}",
+
+            // Micrometers addon
+            micrometer: "io.micrometer:micrometer-core:${micrometerVersion}",
+            micrometer_prometheus: "io.micrometer:micrometer-registry-prometheus:${micrometerVersion}",
+
+            // CircuitBreaker documentation
+            metrics_healthcheck: "io.dropwizard.metrics:metrics-healthchecks:${metricsVersion}",
+
+            // Prometheus addon
+            prometheus_simpleclient: "io.prometheus:simpleclient_common:${prometheusSimpleClientVersion}",
+            prometheus_spring_boot: "io.prometheus:simpleclient_spring_boot:${prometheusSimpleClientVersion}"
+    ]
+}

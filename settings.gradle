@@ -1,0 +1,3 @@
+rootProject.name = 'resilience4j-bug'
+include 'resilience4j-spring-boot2'
+
